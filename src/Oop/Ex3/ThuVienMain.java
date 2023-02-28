@@ -1,6 +1,7 @@
 package Oop.Ex3;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
 
@@ -22,10 +23,13 @@ public class ThuVienMain {
 //        Book book = new Book(maTaiLieu,nhaXB,soBanPhatHanh,tenTacGia,soTrang,gia);
 //        TapChi tapChi = new TapChi(maTaiLieu,nhaXB,soBanPhatHanh,soPhatHanh);
 //        Bao bao = new Bao(maTaiLieu,nhaXB,soBanPhatHanh,ngayPhatHanh);
+        ArrayList<Book> listBook = new ArrayList<Book>();
         chonYeuCau();
+
 
     }
     static void chonYeuCau(){
+        ArrayList<Book> listBook = new ArrayList<Book>();
         Scanner scanner = new Scanner(System.in);
         System.out.println("Chon yeu cau");
         System.out.println("1.Nhap thong tin");
@@ -42,6 +46,7 @@ public class ThuVienMain {
             case 3:
                 timKiem();
                 break;
+
         }
     }
     static void nhapThongTin(){
@@ -69,7 +74,7 @@ public class ThuVienMain {
                 break;
         }
     }
-    static void nhapSach(){
+    static Book[] nhapSach(){
         String maTaiLieu = null;
         String nhaXB = null;
         int soBanPhatHanh = 50;
@@ -96,6 +101,7 @@ public class ThuVienMain {
             gia = Integer.parseInt(scanner.nextLine());
             books[i] = new Book(maTaiLieu,nhaXB,soBanPhatHanh,tenTacGia,soTrang,gia);
         }
+        return books;
     }
     static void nhapTapChi(){
         String maTaiLieu = null;
@@ -142,7 +148,11 @@ public class ThuVienMain {
         }
     }
     static void showFull(){
-
+        int dem = 0;
+        for (int i = 0; i < nhapSach().length; i++) {
+            dem ++;
+        }
+        System.out.println(dem);
     }
     static void timKiem(){
     }
