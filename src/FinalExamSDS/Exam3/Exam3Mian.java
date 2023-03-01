@@ -42,6 +42,7 @@ public class Exam3Mian {
                     break;
                 case 6:
                     vongLap = false;
+                    break;
             }
         }while (vongLap == true);
 
