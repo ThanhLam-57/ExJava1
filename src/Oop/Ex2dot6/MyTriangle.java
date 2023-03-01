@@ -1,9 +1,9 @@
 package Oop.Ex2dot6;
 
 public class MyTriangle extends MyPoint{
-    private MyPoint v1 = new MyPoint();
-    private MyPoint v2 = new MyPoint();
-    private MyPoint v3 = new MyPoint();
+    private MyPoint v1;
+    private MyPoint v2;
+    private MyPoint v3;
 
     public MyTriangle(MyPoint v1, MyPoint v2, MyPoint v3) {
         this.v1 = v1;
